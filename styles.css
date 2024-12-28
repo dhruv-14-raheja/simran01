@@ -1,0 +1,228 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fbe6e6;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.header-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #e91e63;
+    animation: fadeIn 2s ease-out;
+}
+
+.proposal-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.proposal-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    color: #d32f2f;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.proposal-message {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e91e63;
+    margin-bottom: 20px;
+}
+
+.accept-button, .decline-button {
+    background-color: #e91e63;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px;
+    position: relative;
+}
+
+.accept-button:hover {
+    background-color: #d32f2f;
+}
+
+.decline-button {
+    background-color: #f44336;
+    position: relative;
+}
+
+.decline-button.swap {
+    background-color: #e91e63;
+    color: #ffffff;
+}
+
+.decline-button.swap:hover {
+    background-color: #d32f2f;
+}
+
+.decline-button.swap .original-text {
+    visibility: hidden;
+}
+
+.decline-button.swap .hover-text {
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.decline-button .hover-text {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.decline-button .original-text {
+    position: relative;
+}
+
+/* Countdown Timer */
+.countdown p {
+    font-size: 1.5em;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+/* Styling for the "Thank You" Page */
+.thank-you-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-header {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em;
+    color: #e91e63;
+    margin-bottom: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+.love-message {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.love-text {
+    margin: 15px 0;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    animation: fadeInText 3s ease-in;
+}
+
+.heart-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    margin: 30px 0;
+    animation: pulse 2s infinite;
+}
+
+.footer-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    color: #e91e63;
+    margin-top: 30px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
